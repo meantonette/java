@@ -1,0 +1,72 @@
+package Jtableunit3;
+
+public class Computes {
+
+	private String first;
+	private String last;
+	private int hows;
+	private int age;
+	private String cb;
+	private String btn;
+	
+	public Computes(String first, String last, int hows, int age,String cb,String btn)
+	{
+		
+		this.last = last;
+		this.first = first;
+		this.hows = hows;
+		this.age = age;
+		setCb(cb);
+		setCb(btn);
+		
+   }//end of Computes
+
+	
+	public String getCb() {
+		return cb;
+	}
+
+	public void setCb(String bc) {
+		if (bc == "IT") {
+			this.cb = "Information Technology";}
+			if (bc == "CE" ) 
+			{
+				this.cb = "Civil Eng'g";
+			}
+			if ( bc == "EE")
+			{
+				this.cb = "Electrical Eng'g" ;
+			}
+			 if (bc == "ME")
+			 {
+			       this.cb = "Mechanical Eng'g";
+			 }
+	}
+
+	public String getFirst() {
+		return first;
+	}
+
+	public String getFullname() {
+		return last + "  " + first;
+	}
+	public void setFirst(String first) {
+		this.first = first;
+	}
+
+	public String getLast() {
+		return last;
+	}
+
+	public void setLast(String last) {
+		this.last = last;
+	}
+	
+	public int getSum() {
+		return num1 + num2;
+	}
+	
+	public int getAve() {
+		return getSum()/2;
+	}
+}

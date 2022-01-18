@@ -1,0 +1,105 @@
+package Jtableunit3;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JComboBox;
+import javax.swing.JRadioButton;
+import javax.swing.JButton;
+import java.awt.Color;
+import javax.swing.border.LineBorder;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class mainGUI {
+
+	private JFrame frame;
+	private JTable table;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					mainGUI window = new mainGUI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public mainGUI() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.DARK_GRAY);
+		frame.getContentPane().setForeground(Color.BLACK);
+		frame.setBounds(100, 100, 620, 487);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBorder(new LineBorder(Color.WHITE));
+		panel.setBackground(Color.PINK);
+		panel.setForeground(Color.BLACK);
+		panel.setBounds(10, 41, 584, 180);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(429, 23, 129, 22);
+		panel.add(comboBox);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("M");
+		rdbtnNewRadioButton.setBounds(437, 72, 109, 23);
+		panel.add(rdbtnNewRadioButton);
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("E");
+		rdbtnNewRadioButton_1.setBounds(437, 98, 109, 23);
+		panel.add(rdbtnNewRadioButton_1);
+		
+		JRadioButton rdbtnNewRadioButton_1_1 = new JRadioButton("T");
+		rdbtnNewRadioButton_1_1.setBounds(437, 124, 109, 23);
+		panel.add(rdbtnNewRadioButton_1_1);
+		
+		JRadioButton rdbtnNewRadioButton_1_1_1 = new JRadioButton("P");
+		rdbtnNewRadioButton_1_1_1.setBounds(437, 150, 109, 23);
+		panel.add(rdbtnNewRadioButton_1_1_1);
+		
+		JLabel lblNewLabel = new JLabel("Positions:");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblNewLabel.setBounds(343, 81, 63, 14);
+		panel.add(lblNewLabel);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.BLACK);
+		panel_1.setBounds(10, 244, 584, 193);
+		frame.getContentPane().add(panel_1);
+		panel_1.setLayout(null);
+		
+		table = new JTable();
+		table.setBorder(new LineBorder(Color.WHITE, 2));
+		table.setBackground(new Color(204, 204, 255));
+		table.setBounds(10, 0, 564, 193);
+		panel_1.add(table);
+		
+		JButton btnNewButton = new JButton("RUN");
+		btnNewButton.setBounds(256, 221, 89, 23);
+		frame.getContentPane().add(btnNewButton);
+	}
+}

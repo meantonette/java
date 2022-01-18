@@ -1,0 +1,159 @@
+package Jtableunit3;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JComboBox;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JButton;
+import java.awt.Color;
+import javax.swing.border.LineBorder;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextPane;
+
+public class mainGUI {
+
+	private JFrame frame;
+	private JTable table;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					mainGUI window = new mainGUI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public mainGUI() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.DARK_GRAY);
+		frame.getContentPane().setForeground(Color.BLACK);
+		frame.setBounds(100, 100, 620, 487);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBorder(new LineBorder(Color.WHITE));
+		panel.setBackground(Color.PINK);
+		panel.setForeground(Color.BLACK);
+		panel.setBounds(10, 41, 584, 180);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setEditable(true);
+		comboBox.setBounds(437, 11, 129, 22);
+		panel.add(comboBox);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("M");
+		rdbtnNewRadioButton.setBounds(437, 72, 109, 23);
+		panel.add(rdbtnNewRadioButton);
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("E");
+		rdbtnNewRadioButton_1.setBounds(437, 98, 109, 23);
+		panel.add(rdbtnNewRadioButton_1);
+		
+		JRadioButton rdbtnNewRadioButton_1_1 = new JRadioButton("T");
+		rdbtnNewRadioButton_1_1.setBounds(437, 124, 109, 23);
+		panel.add(rdbtnNewRadioButton_1_1);
+		
+		JRadioButton rdbtnNewRadioButton_1_1_1 = new JRadioButton("P");
+		rdbtnNewRadioButton_1_1_1.setBounds(437, 150, 109, 23);
+		panel.add(rdbtnNewRadioButton_1_1_1);
+		
+		JLabel lblNewLabel = new JLabel("Positions:");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblNewLabel.setBounds(343, 81, 63, 14);
+		panel.add(lblNewLabel);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setEnabled(false);
+		textPane.setBounds(437, 44, 129, 20);
+		panel.add(textPane);
+		
+		JLabel lblDepartment = new JLabel("Department:");
+		lblDepartment.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblDepartment.setBounds(343, 15, 84, 14);
+		panel.add(lblDepartment);
+		
+		JLabel lblFirstName = new JLabel("First Name:");
+		lblFirstName.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblFirstName.setBounds(10, 83, 84, 14);
+		panel.add(lblFirstName);
+		
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setBounds(140, 77, 129, 20);
+		panel.add(textPane_1);
+		
+		JLabel lblLastName = new JLabel("Last Name:");
+		lblLastName.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblLastName.setBounds(10, 50, 84, 14);
+		panel.add(lblLastName);
+		
+		JTextPane textPane_1_1 = new JTextPane();
+		textPane_1_1.setBounds(140, 44, 129, 20);
+		panel.add(textPane_1_1);
+		
+		JLabel lblAge = new JLabel("Age:");
+		lblAge.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblAge.setBounds(10, 114, 84, 14);
+		panel.add(lblAge);
+		
+		JTextPane textPane_1_2 = new JTextPane();
+		textPane_1_2.setBounds(140, 108, 129, 20);
+		panel.add(textPane_1_2);
+		
+		JLabel lblFirstName_2_1 = new JLabel("Hours of Work:");
+		lblFirstName_2_1.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblFirstName_2_1.setBounds(10, 149, 109, 14);
+		panel.add(lblFirstName_2_1);
+		
+		JTextPane textPane_1_2_1 = new JTextPane();
+		textPane_1_2_1.setBounds(140, 143, 129, 20);
+		panel.add(textPane_1_2_1);
+		
+		JLabel lblLastName_1 = new JLabel("Employee Personal Information");
+		lblLastName_1.setFont(new Font("Lucida Calligraphy", Font.BOLD, 15));
+		lblLastName_1.setBounds(10, 15, 301, 18);
+		panel.add(lblLastName_1);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.BLACK);
+		panel_1.setBounds(10, 244, 584, 193);
+		frame.getContentPane().add(panel_1);
+		panel_1.setLayout(null);
+		
+		String[] columnNames= {"Last Name", "First Name", "Department", "Age", "Position", "Salary", "OT", "Total Deduction", "Net Salary"};
+		
+	        // Initializing the JTable
+	        table = new JTable(columnNames);
+	        table.setBounds(30, 40, 200, 300);
+	 
+		JButton btnNewButton = new JButton("RUN");
+		btnNewButton.setBounds(256, 221, 89, 23);
+		frame.getContentPane().add(btnNewButton);
+	}
+}

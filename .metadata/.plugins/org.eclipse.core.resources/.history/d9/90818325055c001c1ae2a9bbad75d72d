@@ -1,0 +1,9 @@
+package personUnit2;
+
+public class Student {
+
+	private String program;
+	private int year;
+	private double fee;
+	private Book books;
+}

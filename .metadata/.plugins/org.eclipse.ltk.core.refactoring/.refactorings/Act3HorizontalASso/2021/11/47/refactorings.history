@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;act3horizontalAsso.Student&apos; to &apos;Students&apos;&#x0D;&#x0A;- Original project: &apos;Act3HorizontalASso&apos;&#x0D;&#x0A;- Original element: &apos;act3horizontalAsso.Student&apos;&#x0D;&#x0A;- Renamed element: &apos;act3horizontalAsso.Students&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Student&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;act3horizontalAsso{Student.java[Student" matchStrategy="1" name="Students" qualified="false" references="true" similarDeclarations="false" stamp="1637140941049" textual="false" version="1.0"/>
+</session>

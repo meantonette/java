@@ -1,0 +1,100 @@
+package unittest3;
+
+import java.awt.event.*;
+
+import javax.swing.*;
+
+@SuppressWarnings("serial")
+public class Myguieventhandler extends JFrame implements ActionListener, ItemListener{
+
+	private int n11;
+	private int n22;
+	private String pos;
+	private String last;
+	private String first;
+	
+	private String cb;
+	private Computes c;
+	
+		public void actionPerformed(ActionEvent e) {
+			
+			if(e.getSource() == myguidesign.btnRun)
+			{
+				try
+				{
+				String n1 = JOptionPane.showInputDialog("Enter your age");
+				String n2 = JOptionPane.showInputDialog("Enter your Hours of Work");
+				
+				if (!((n1== null) || (n2 == null)))
+			        n11 = Integer.parseInt(n1);
+				    n22 = Integer.parseInt(n2);
+				
+				
+		    }catch (NumberFormatException x)
+			{
+			    System.err.println("Error: Invalid Input!");
+			    JOptionPane.showMessageDialog(null, "Error: Invalid Input!",  
+			    "Error", JOptionPane.ERROR_MESSAGE);
+			}
+				
+				
+		} 
+			
+			if(myguidesign.btnM.isSelected()){    
+				pos = "Messenger";
+				}    
+			if(myguidesign.btnE.isSelected()){    
+				
+				pos = "Encoder";
+			}
+			
+			if(myguidesign.btnT.isSelected()){    
+				pos = "Technician";
+						//myguidesign.rdbM.getText();
+				}    
+			if(myguidesign.btnP.isSelected()){    
+				
+				pos = "Programmer";
+			}
+			
+			
+			myguidesign.Eage.setText(String.valueOf(n11));
+			myguidesign.EHow.setText(String.valueOf(n22));
+			
+			
+			last = myguidesign.txtfname.getText();
+			first = myguidesign.txtlname.getText();
+			cb = (String) ((JComboBox) myguidesign.cmbdept).getSelectedItem();
+			
+		
+			c = new Computes(n11,n22,last,first,cb,pos);
+			
+			myguidesign.txtFull.setText(c.getFullname());
+			myguidesign.txtSum.setText(String.valueOf(c.getSum()));
+			myguidesign.txtAve.setText(String.valueOf(c.getAve()));
+			myguidesign.txtDes.setText(c.getCb());
+			myguidesign.txtGender.setText(c.getGender());
+		}//end of event
+	
+		public void itemStateChanged(ItemEvent e) {
+			// TODO Auto-generated method stub
+			
+			if (e.getSource() == myguidesign.cmbdept)
+			{
+				myguidesign.Edept.setText((String) myguidesign.cmbdept.getSelectedItem());
+			}
+			
+			
+			if (e.getSource() == myguidesign.rdbM) {
+				
+				myguidesign.txtGender.setText( ((JRadioButton) e.getItem()).getText());
+			}
+			
+			if (myguidesign.rdbF.isSelected()) {
+				
+				myguidesign.txtGender.setText( ((JRadioButton) e.getItem()).getText());
+		}//end ofitemEvent	*/
+		
+		}
+}//end of class
+}

@@ -1,0 +1,51 @@
+package assAreas;
+
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+public class AreaofCircle {
+	
+	public static void main(String[] args) {
+		//TODO auto-generated method stub
+		
+		System.out.println("AREA OF A CIRCLE");
+		
+		JOptionPane.showMessageDialog(null, "Welcome to the Area of Circle", "Compute Area of Circle", JOptionPane.INFORMATION_MESSAGE);
+		
+		computeAreaCir call = new computeAreaCir();
+		End call2 = new End();
+		
+		call.computeArC(); call2.Ends();
+		
+		}
+		
+	}
+
+	class computeAreaCir {
+		
+		Scanner scan = new Scanner (System.in);
+		//class that allows you to input data from keyboard
+		
+		void computeArC() {
+		
+			int input1, input2, areaRec;
+			System.out.println("Enter the Length:");	
+			input1 = scan.nextInt();
+			
+			System.out.println("Enter the Width:");
+			input2 = scan.nextInt();
+			
+			areaRec = input1 * input2;
+			System.out.println("Area of the Rectangle is: " + areaRec);
+		}
+		
+	}
+
+	class End {
+		
+		void Ends() {
+			
+			System.out.println("Finish. Thank You");	
+		}	
+	}
+

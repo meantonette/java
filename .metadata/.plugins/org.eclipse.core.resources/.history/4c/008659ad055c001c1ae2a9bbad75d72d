@@ -1,0 +1,14 @@
+package personUnit2;
+
+public class Student extends Person{
+
+	private String program;
+	private int year;
+	private double fee;
+	private Book books;
+	
+	public Student(String name, String address, String program, int year, double fee, Book books) {
+		super(name, address);
+		
+	}
+}

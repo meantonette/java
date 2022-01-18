@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;AFace.CalculateButton.java&apos; to &apos;CalculateButtonHandler.java&apos;&#x0D;&#x0A;- Original project: &apos;1129AFace&apos;&#x0D;&#x0A;- Original element: &apos;AFace.CalculateButton.java&apos;&#x0D;&#x0A;- Renamed element: &apos;AFace.CalculateButtonHandler.java&apos;" description="Rename compilation unit &apos;CalculateButton.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;AFace{CalculateButton.java" name="CalculateButtonHandler.java" references="false" stamp="1638181698563" version="1.0"/>
+</session>

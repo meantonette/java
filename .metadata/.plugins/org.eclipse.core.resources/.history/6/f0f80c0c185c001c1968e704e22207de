@@ -1,0 +1,93 @@
+package personUnit2;
+
+import java.util.Scanner;
+
+public class main {
+	
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) throws InterruptedException{
+		// TODO Auto-generated method stub
+		
+//		//PERSON
+//		String name, addr;
+//		System.out.print("Enter Person Name: ");
+//		name = sc.nextLine();
+//		
+//		System.out.print("Enter Person Address: ");
+//		addr = sc.nextLine();
+//		
+//		//Student
+//		String prog;
+//		int yr;
+//		double fee;
+//		Book books;
+//		
+//		System.out.print("Enter Student Program: ");
+//		prog = sc.nextLine();
+//		
+//		System.out.print("Enter Student Year: ");
+//		yr = sc.nextInt();
+//		
+//		System.out.print("Enter Student Fee: ");
+//		fee = sc.nextDouble();
+//		
+//		//BOOK
+//		
+//		String bookname, author;
+//		double price;
+//		int qty;
+//		
+//		System.out.print("Enter Book Name: ");
+//		bookname = sc.nextLine();
+//		
+//		System.out.print("Enter Book Author: ");
+//		author = sc.nextLine();
+//		
+//		System.out.print("Enter Book Price: ");
+//		price = sc.nextDouble();
+//		
+//		System.out.print("Enter Book Quantity: ");
+//		qty = sc.nextInt();
+//		
+//		//AUTHOR
+//		
+//		String authorname, email, gender;
+//		
+//		System.out.print("Enter Author Name: ");
+//		authorname = sc.nextLine();
+//		
+//		System.out.print("Enter Author Email: ");
+//		email = sc.nextLine();
+//		
+//		System.out.print("Enter Author Gender: ");
+//		gender = sc.nextLine();
+//		
+//		//STAFF
+//		String school;
+//		double pay;
+//		
+//		System.out.print("Enter school: ");
+//		school = sc.nextLine();
+//		
+//		System.out.print("Enter  Pay: ");
+//		pay = sc.nextDouble();
+		
+		//PRINT
+		Author auth = new Author("Meantonette", "meantonette.medalla@tup.edu.ph", "Female");
+		Book book = new Book("The little boy who dreamed big", auth, 500.00, 3);
+		Person pers = new Person("Taehyung", "Seoul");
+		Student stud = new Student("Taehyung", "Seoul", "BSIT", 2, 1500.00, book);
+		Staff staff = new Staff("Taehyung", "Seoul", "Seoul International School", 750);
+		
+		System.out.println(pers.toString());
+		System.out.println(stud.toString());
+		System.out.println("Total Payment: " + (stud.getFee() + book.getPrice()));
+		
+		System.out.println(book.toString());
+//		System.out.println(auth.toString());
+		System.out.println(staff.toString());
+		
+	}
+
+}

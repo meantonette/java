@@ -1,0 +1,15 @@
+package Jtableunit3;
+
+public class JFrame_TextFiled {
+	// Button to add row
+	private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {                                           
+	      
+	        JFRAME_JTABLE.AddRowToJTable(new Object[]{
+	                                                  jTextField1.getText(),
+	                                                  jTextField2.getText(),
+	                                                  jTextField3.getText(),
+	                                           });
+	        
+	    }
+
+}

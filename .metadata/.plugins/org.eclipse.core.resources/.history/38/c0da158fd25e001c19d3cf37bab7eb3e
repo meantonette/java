@@ -1,0 +1,111 @@
+package unittest3;
+
+import java.awt.event.*;
+
+import javax.swing.*;
+
+@SuppressWarnings("serial")
+public class Myguieventhandler extends JFrame implements ActionListener, ItemListener{
+
+	private int age;
+	private int hows;
+	private String pos;
+	private String last;
+	private String first;
+	
+	private String cb;
+	private Computes c;
+	
+		public void actionPerformed(ActionEvent e) {
+			
+			if(e.getSource() == myguidesign.btnRun)
+			{
+				try
+				{
+				String n1 = JOptionPane.showInputDialog("Enter your age");
+				String n2 = JOptionPane.showInputDialog("Enter your Hours of Work");
+				
+				if (!((n1== null) || (n2 == null)))
+					age = Integer.parseInt(n1);
+					hows = Integer.parseInt(n2);
+				
+		    }catch (NumberFormatException x)
+			{
+			    System.err.println("Error: Invalid Input!");
+			    JOptionPane.showMessageDialog(null, "Error: Invalid Input!",  
+			    "Error", JOptionPane.ERROR_MESSAGE);
+			}
+				
+				
+		} 
+			
+			if(myguidesign.btnM.isSelected()){    
+				pos = "Messenger";
+				}    
+			if(myguidesign.btnE.isSelected()){    
+				
+				pos = "Encoder";
+			}
+			
+			if(myguidesign.btnT.isSelected()){    
+				pos = "Technician";
+						//myguidesign.rdbM.getText();
+				}    
+			if(myguidesign.btnP.isSelected()){    
+				
+				pos = "Programmer";
+			}
+			
+			
+			myguidesign.Eage.setText(String.valueOf(age));
+			myguidesign.EHow.setText(String.valueOf(hows));
+			
+			
+			last = myguidesign.txtfname.getText();
+			first = myguidesign.txtlname.getText();
+			cb = (String) ((JComboBox) myguidesign.cmbdept).getSelectedItem();
+			
+			//	public Computes(String first, String last, int hows, int age,String cb, String pos)
+		
+			c = new Computes(first, last,age,hows,cb,pos);
+			
+			myguidesign.Ename.setText(c.getFullname());
+			myguidesign.txtSum.setText(String.valueOf(c.getSum()));
+			myguidesign.txtAve.setText(String.valueOf(c.getAve()));
+			myguidesign.txtDes.setText(c.getCb());
+			myguidesign.Epos.setText(c.getGender());
+		}//end of event
+	
+		public void itemStateChanged(ItemEvent e) {
+			// TODO Auto-generated method stub
+			
+			if (e.getSource() == myguidesign.cmbdept)
+			{
+				myguidesign.Edept.setText((String) myguidesign.cmbdept.getSelectedItem());
+			}
+			
+			
+			if (e.getSource() == myguidesign.btnM) {
+				
+				myguidesign.Epos.setText( ((JRadioButton) e.getItem()).getText());
+			}
+			
+			if (myguidesign.btnM.isSelected()) {
+				
+				myguidesign.Epos.setText( ((JRadioButton) e.getItem()).getText());
+		}//end ofitemEvent	*/
+			
+			
+			if (myguidesign.btnT.isSelected()) {
+				
+				myguidesign.Epos.setText( ((JRadioButton) e.getItem()).getText());
+		}//end ofitemEvent	*/
+			
+			if (myguidesign.btnP.isSelected()) {
+				
+				myguidesign.Epos.setText( ((JRadioButton) e.getItem()).getText());
+		}//end ofitemEvent	*/
+		
+		}
+}//end of class
+

@@ -1,0 +1,134 @@
+package Jtableunit3;
+
+public class Computes {
+
+	private String first;
+	private String last;
+	private int hows;
+	private int age;
+	private String cb;
+	private String btn;
+	
+	public Computes(String first, String last, int hows, int age,String cb,String btn)
+	{
+		
+		this.last = last;
+		this.first = first;
+		this.hows = hows;
+		this.age = age;
+		setCb(cb);
+		setBtn(btn);	
+   }//end of Computes
+
+	public String getFirst() {
+		return first;
+	}
+
+	public String getLast() {
+		return last;
+	}
+	
+	public void setFirst(String first) {
+		this.first = first;
+	}
+
+	public void setLast(String last) {
+		this.last = last;
+	}
+	
+	public String getFullname() {
+	return last + ", " + first;
+	}
+	
+	
+	public int getHows() {
+		return hows;
+	}
+	
+	public void setHows(int hows) {
+		this.hows = hows;
+	}
+
+	public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getCb() {
+		return cb;
+	}
+
+	public void setCb(String cbx) {
+		if (cbx == "Archi") {
+		this.cb = "Information Technology";}
+		
+		if (cbx == "HW" ) 
+		{
+			this.cb = "Civil Eng'g";
+		}
+		
+		if ( cbx == "SW")
+		{
+			this.cb = "Electrical Eng'g" ;
+		}
+		
+		 if (cbx == "N")
+		 {
+		       this.cb = "Mechanical Eng'g";
+		 }
+	}
+
+//	public String getCb() {
+//	return cb;
+//}
+//
+//public void setCb(String bc) {
+
+//"Architecture", "Hardware", "Software", "Networking"
+
+//	if (bc == "IT") {
+//		this.cb = "Information Technology";}
+//		if (bc == "CE" ) 
+//		{
+//			this.cb = "Civil Eng'g";
+//		}
+//		if ( bc == "EE")
+//		{
+//			this.cb = "Electrical Eng'g" ;
+//		}
+//		 if (bc == "ME")
+//		 {
+//		       this.cb = "Mechanical Eng'g";
+//		 }
+//}
+	
+	
+	
+	public String getBtn() {
+		return btn;
+	}
+
+	public void setBtn(String btn) {
+		this.btn = btn;
+	}
+
+
+	
+
+
+	
+
+
+	
+	
+//	public int getSum() {
+//		return num1 + num2;
+//	}
+//	
+//	public int getAve() {
+//		return getSum()/2;
+//	}
+}
